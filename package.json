@@ -1,0 +1,27 @@
+{
+  "name": "@nacal/ts-mcp-server-template",
+  "version": "0.0.1",
+  "description": "TypeScript MCP server template",
+  "license": "MIT",
+  "author": "nacal",
+  "type": "module",
+  "bin": {
+    "mcp-server-template": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "bun run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3"
+  }
+}
